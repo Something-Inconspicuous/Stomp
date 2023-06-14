@@ -1,6 +1,9 @@
 bin/
 obj/
 
+*.bat
+*.sh
+
 # java
 
 # Compiled class file
