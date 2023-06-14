@@ -43,6 +43,9 @@ Here is also a step by step guide
         @Arg(longName = "num", required = true) // Give them any option name you want
         public int arg3; // Number arguments
 
+        @NotArg // Make the parser ignore a field 
+        public char notArg = 'a';
+
         @Arg(longName = "bool", shortName = "b")
         public boolean arg4 = true; // Booleans can be added
         // If a boolean argument is passed without a value, it will
@@ -60,6 +63,7 @@ Here is also a step by step guide
             // Example stuff
             // Do note, if an argument is not required, it
             // will have its "zeroed" value (null for objects)
+            // if not passed in the args
             if(arg.arg4){
                 System.out.println(arg.arg1 + " " + arg.arg2);
                 System.out.println(arg.arg3 + 1);
