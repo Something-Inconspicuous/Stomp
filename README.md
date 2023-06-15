@@ -3,8 +3,7 @@ Args manager for Java.
 
 ## Usage
 
-I have not uploaded to maven yet, so you actually can't use this currently.
-However there is an example in the
+You can find an example of this package used in the
 [Main.java](stomp\src\main\java\io\github\something_inconspicuous\Main.java)
 file.
 
