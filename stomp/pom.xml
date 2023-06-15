@@ -71,4 +71,12 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/Something-Inconspicuous/Stomp</url>
+    </repository>
+  </distributionManagement>
 </project>
