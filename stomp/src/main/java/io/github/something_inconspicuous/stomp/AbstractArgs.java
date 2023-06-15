@@ -81,7 +81,12 @@ public abstract class AbstractArgs {
             for(int i = 0; i < args.length; i++){
                 //System.out.format("args[%d]: %s\n", i, args[i]);
                 //System.out.format("Comparing %s to %s with result %b\n", args[i], longName, (args[i].equals(longName)));
+                
                 if(args[i].equals(longName) || args[i].equals(shortName)){
+
+                    boolean tempAccessable = field.canAccess(this);
+                    field.setAccessible(true);
+
                     if(i == args.length - 1){
                         if(field.getType() == boolean.class){
                             try {
@@ -91,7 +96,7 @@ public abstract class AbstractArgs {
                                 e.printStackTrace();
                             } catch (IllegalAccessException e) {
                                 new IllegalArgumentFieldException(
-                                    format("Field %s innaccessable to parsing. Please set all argument fields to public visiblity.", field),
+                                    format("Field %s innaccessable to parsing. Make sure that all arguments are writable.", field),
                                     e.fillInStackTrace()
                                 )
                                 .printStackTrace();
@@ -115,7 +120,7 @@ public abstract class AbstractArgs {
                             e.printStackTrace();
                         } catch (IllegalAccessException e) {
                             new IllegalArgumentFieldException(
-                                format("Field %s innaccessable to parsing. Please set all argument fields to public visiblity.", field),
+                                format("Field %s innaccessable to parsing. Make sure that all arguments are writable.", field),
                                 e.fillInStackTrace()
                             )
                             .printStackTrace();
@@ -134,7 +139,7 @@ public abstract class AbstractArgs {
                             e.printStackTrace();
                         } catch (IllegalAccessException e) {
                             new IllegalArgumentFieldException(
-                                format("Field %s innaccessable to parsing. Please set all argument fields to public visiblity.", field),
+                                format("Field %s innaccessable to parsing. Make sure that all arguments are writable.", field),
                                 e.fillInStackTrace()
                             )
                             .printStackTrace();
@@ -153,7 +158,7 @@ public abstract class AbstractArgs {
                             e.printStackTrace();
                         } catch (IllegalAccessException e) {
                             new IllegalArgumentFieldException(
-                                format("Field %s innaccessable to parsing. Please set all argument fields to public visiblity.", field),
+                                format("Field %s innaccessable to parsing. Make sure that all arguments are writable.", field),
                                 e.fillInStackTrace()
                             )
                             .printStackTrace();
@@ -172,7 +177,7 @@ public abstract class AbstractArgs {
                             e.printStackTrace();
                         } catch (IllegalAccessException e) {
                             new IllegalArgumentFieldException(
-                                format("Field %s innaccessable to parsing. Please set all argument fields to public visiblity.", field),
+                                format("Field %s innaccessable to parsing. Make sure that all arguments are writable.", field),
                                 e.fillInStackTrace()
                             )
                             .printStackTrace();
@@ -191,7 +196,7 @@ public abstract class AbstractArgs {
                             e.printStackTrace();
                         } catch (IllegalAccessException e) {
                             new IllegalArgumentFieldException(
-                                format("Field %s innaccessable to parsing. Please set all argument fields to public visiblity.", field),
+                                format("Field %s innaccessable to parsing. Make sure that all arguments are writable.", field),
                                 e.fillInStackTrace()
                             )
                             .printStackTrace();
@@ -210,7 +215,7 @@ public abstract class AbstractArgs {
                             e.printStackTrace();
                         } catch (IllegalAccessException e) {
                             new IllegalArgumentFieldException(
-                                format("Field %s innaccessable to parsing. Please set all argument fields to public visiblity.", field),
+                                format("Field %s innaccessable to parsing. Make sure that all arguments are writable.", field),
                                 e.fillInStackTrace()
                             )
                             .printStackTrace();
@@ -229,7 +234,7 @@ public abstract class AbstractArgs {
                             e.printStackTrace();
                         } catch (IllegalAccessException e) {
                             new IllegalArgumentFieldException(
-                                format("Field %s innaccessable to parsing. Please set all argument fields to public visiblity.", field),
+                                format("Field %s innaccessable to parsing. Make sure that all arguments are writable.", field),
                                 e.fillInStackTrace()
                             )
                             .printStackTrace();
@@ -248,7 +253,7 @@ public abstract class AbstractArgs {
                             e.printStackTrace();
                         } catch (IllegalAccessException e) {
                             new IllegalArgumentFieldException(
-                                format("Field %s innaccessable to parsing. Please set all argument fields to public visiblity.", field),
+                                format("Field %s innaccessable to parsing. Make sure that all arguments are writable.", field),
                                 e.fillInStackTrace()
                             )
                             .printStackTrace();
@@ -267,7 +272,7 @@ public abstract class AbstractArgs {
                             e.printStackTrace();
                         } catch (IllegalAccessException e) {
                             new IllegalArgumentFieldException(
-                                format("Field %s innaccessable to parsing. Please set all argument fields to public visiblity.", field),
+                                format("Field %s innaccessable to parsing. Make sure that all arguments are writable.", field),
                                 e.fillInStackTrace()
                             )
                             .printStackTrace();
@@ -285,7 +290,7 @@ public abstract class AbstractArgs {
                                 e.printStackTrace();
                             } catch (IllegalAccessException e) {
                                 new IllegalArgumentFieldException(
-                                    format("Field %s innaccessable to parsing. Please set all argument fields to public visiblity.", field),
+                                    format("Field %s innaccessable to parsing. Make sure that all arguments are writable.", field),
                                     e.fillInStackTrace()
                                 )
                                 .printStackTrace();
@@ -300,7 +305,7 @@ public abstract class AbstractArgs {
                             e.printStackTrace();
                         } catch (IllegalAccessException e) {
                             new IllegalArgumentFieldException(
-                                format("Field %s innaccessable to parsing. Please set all argument fields to public visiblity.", field),
+                                format("Field %s innaccessable to parsing. Make sure that all arguments are writable.", field),
                                 e.fillInStackTrace()
                             )
                             .printStackTrace();
@@ -315,6 +320,7 @@ public abstract class AbstractArgs {
                         e.printStackTrace();
                     }
                     
+                    field.setAccessible(tempAccessable);
                     break;
                 }
             }
