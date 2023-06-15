@@ -4,7 +4,7 @@ Args manager for Java.
 ## Usage
 
 I have not uploaded to maven yet, so you actually can't use this currently.
-Howver there is an example in the
+However there is an example in the
 [Main.java](stomp\src\main\java\io\github\something_inconspicuous\Main.java)
 file.
 
