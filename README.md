@@ -9,12 +9,26 @@ file.
 
 Here is also a step by step guide
 
-1. Make sure to import the stomp package
+1. Add this to your `pom.xml`
+    ```xml
+    <dependency>
+        <groupId>io.github.somethinginconspicuous</groupId>
+        <artifactId>stomp</artifactId>
+        <version>2.2-SNAPSHOT</version>
+    </dependency>
+    ```
+
+2. Run via command line
+    ```cmd
+    mvn install
+    ```
+
+3. Make sure to import the stomp package
     ```java
     import io.github.something_inconspicuous.stomp.*;
     ```
 
-2. Create your program
+4. Create your program
     ```java
     public class Main {
         public static void main(String[] args){
@@ -23,14 +37,14 @@ Here is also a step by step guide
     }
     ```
 
-3. Create your container class
+5. Create your container class
     ```java
     class Args extends AbstractArgs {
 
     }
     ```
 
-4. Create your arguments
+6. Create your arguments
     ```java
     class Args extends AbstractArgs {
         @Arg(required = true) // You can require arguments
@@ -52,7 +66,7 @@ Here is also a step by step guide
     }
     ```
 
-5. Parse your arguments
+7. Parse your arguments
     ```java
     public class Example {
         public static void main(String[] args){
@@ -75,7 +89,7 @@ Here is also a step by step guide
     }
     ```
 
-6. Pass your arguments <br>
+8. Pass your arguments <br>
     ```cmd
     java Example -b --arg1 "Wow, hello" -a2 Stomp! --num 3
     ```
