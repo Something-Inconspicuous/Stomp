@@ -4,7 +4,7 @@ Args manager for Java.
 ## Usage
 
 You can find an example of this package used in the
-[Main.java](stomp\src\main\java\io\github\something_inconspicuous\Main.java)
+[Main.java](stomp/src/main/java/io/github/something_inconspicuous/Main.java)
 file.
 
 Here is also a step by step guide
