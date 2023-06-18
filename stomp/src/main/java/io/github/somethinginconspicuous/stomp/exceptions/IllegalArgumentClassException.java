@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package io.github.something_inconspicuous.stomp.exceptions;
+package io.github.somethinginconspicuous.stomp.exceptions;
 
 /**
  * Indicates that the parser ran into an issue due to the argument container

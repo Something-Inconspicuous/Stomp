@@ -14,7 +14,7 @@ Here is also a step by step guide
     <dependency>
         <groupId>io.github.somethinginconspicuous</groupId>
         <artifactId>stomp</artifactId>
-        <version>2.2-SNAPSHOT</version>
+        <version>3.0-SNAPSHOT</version>
     </dependency>
     ```
 

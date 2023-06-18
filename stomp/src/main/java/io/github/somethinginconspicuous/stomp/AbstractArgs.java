@@ -22,16 +22,16 @@
  * SOFTWARE.
  */
 
-package io.github.something_inconspicuous.stomp;
+package io.github.somethinginconspicuous.stomp;
 
 import static java.lang.String.format;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 
-import io.github.something_inconspicuous.stomp.exceptions.IllegalArgumentClassException;
-import io.github.something_inconspicuous.stomp.exceptions.IllegalArgumentFieldException;
-import io.github.something_inconspicuous.stomp.exceptions.IllegalCommandArgumentException;
+import io.github.somethinginconspicuous.stomp.exceptions.IllegalArgumentClassException;
+import io.github.somethinginconspicuous.stomp.exceptions.IllegalArgumentFieldException;
+import io.github.somethinginconspicuous.stomp.exceptions.IllegalCommandArgumentException;
 
 /**
  * A class that extends {@link AbstractArgs} will be able to act as a container for argument

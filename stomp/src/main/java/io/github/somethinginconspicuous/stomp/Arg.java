@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package io.github.something_inconspicuous.stomp;
+package io.github.somethinginconspicuous.stomp;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -30,13 +30,15 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Indicates that a field on a user class args container does ***NOT***
- * corrospond to an argument.
- * 
+ * Indicates an argument field with the information to properly parse it, such as a 
+ * {@link #longName()} (--fullname) and {@link #shortName()} (-short). There is also
+ * a {@link #required()} option to make an option required.
  * @author Matthew "Something Inconspicuous"
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface NotArg {
-
+public @interface Arg {
+    String longName() default "";
+    String shortName() default "";
+    boolean required() default false;
 }

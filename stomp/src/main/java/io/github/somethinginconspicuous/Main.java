@@ -1,4 +1,4 @@
-package io.github.something_inconspicuous;
+package io.github.somethinginconspicuous;
 
 /**
  * This is an example of how to use Stomp to parse the given array of strings into

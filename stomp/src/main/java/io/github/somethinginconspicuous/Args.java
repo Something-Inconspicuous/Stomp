@@ -1,8 +1,8 @@
-package io.github.something_inconspicuous;
+package io.github.somethinginconspicuous;
 
-import io.github.something_inconspicuous.stomp.AbstractArgs;
-import io.github.something_inconspicuous.stomp.Arg;
-import io.github.something_inconspicuous.stomp.NotArg;
+import io.github.somethinginconspicuous.stomp.AbstractArgs;
+import io.github.somethinginconspicuous.stomp.Arg;
+import io.github.somethinginconspicuous.stomp.NotArg;
 
 /**
  * This is an example user class to contain fields that corrospond to program arguments.
